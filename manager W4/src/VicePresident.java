@@ -1,13 +1,14 @@
 public class VicePresident extends Manager{ 
-    String address;
+    private String address;
     
-    VicePresident(String name, String company){
+    VicePresident(String name, String company, String address){
         super(name, company);
+        this.address = address;
     }
     
     VicePresident(String name){
         super(name, null );
-    }
+    } 
     
     VicePresident(){
         super(null); 
@@ -29,5 +30,9 @@ public class VicePresident extends Manager{
 
     int getParentSalary(){
         return super.getSalary();
+    }
+
+    String getaddress(){
+        return this.address;
     }
 }
