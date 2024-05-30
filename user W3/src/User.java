@@ -13,22 +13,20 @@ class user {
         this.admin = admin;
     }
 
-    user(String username, String password, Boolean admin){
-        this.username = username;
-        this.password = password;
-        this.admin = admin;
+    user(String username, String password, String phoneNumber){
+        this(username, password,phoneNumber, false);
     }
 
     user(String username, String password){
-        this.username = username;
-        this.password = password;
+        this(username, password, null);
     }
 
     user(String username){
-        this.username = username;
+        this(username, null);
     }
 
     user(){
+        this(null);
     }
 
     void userMe() throws Exception {
